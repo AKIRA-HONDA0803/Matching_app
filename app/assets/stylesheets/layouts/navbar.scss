@@ -1,0 +1,29 @@
+// ユーザーのshowページのナビゲーションバー
+.nav-link {
+  // 元の色は青。白に変える。
+  color: #DADFE5;
+  // リンク先にカーソルを乗せたら色がピンクに
+  &:hover {
+    color: #FD3378;
+  }
+}
+
+.active {
+  color: #FD3378;
+}
+
+.fa-fire {
+  color: #DADFE5;
+}
+
+.fa-comments {
+  color: #DADFE5;
+}
+
+.fa-user {
+  color: #DADFE5;
+}
+
+.inherit {
+  color: inherit;
+}

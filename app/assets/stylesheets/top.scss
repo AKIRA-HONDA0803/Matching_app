@@ -4,9 +4,10 @@
 
 
 .jumbotron {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05) ), url("app/assets/images/top.jpg") center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05) ), image-url("top.jpg") center no-repeat;
   background-size: cover;
   height: 100vh;
+  // vh：ビューポート（画面サイズ）の高さに対する割合。100vhは画面の高さと同じ（100%）を表す
   padding: 0;
   border-radius: 0;
 }
@@ -22,8 +23,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  // 汎用的な上下中央寄せの技法として、よく使われています。
   letter-spacing: 2px;
   white-space: nowrap;
+  // white-space は CSS のプロパティで、要素内のホワイトスペースをどのように扱うかを設定
 }
 
 .top-authentication {
@@ -53,10 +56,10 @@
   }
 }
 
-@media (min-width: 768px) {
-  .top-authentication {
-    &__sign-in-btn {
-      display: none;
-    }
-  }
-}
+// @media (min-width: 768px) {
+//   .top-authentication {
+//     &__sign-in-btn {
+//       display: none;
+//     }
+//   }
+// }
