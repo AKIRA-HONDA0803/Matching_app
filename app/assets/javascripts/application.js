@@ -18,3 +18,5 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+require("src/profile_image_upload");

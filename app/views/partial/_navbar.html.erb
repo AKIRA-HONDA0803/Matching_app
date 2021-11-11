@@ -7,7 +7,7 @@
   <% end %>
   <%= link_to user_path(@user), class: "nav-item nav-link" do %>
   <!--現在アクセスしているページがプロフィールページの場合、アイコンの色がつく-->
-    <span class="<%= 'active' if current_page?(user_path(@user)) %>">
+    <span class="<%= 'active' if current_page?(user_path(@user)) || current_page?(edit_user_registration_path) %>">
       <i class="fas fa-user fa-lg inherit"></i>
     </span>
   <% end %>
