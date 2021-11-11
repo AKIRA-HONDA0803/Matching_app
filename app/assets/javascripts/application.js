@@ -20,3 +20,5 @@
 //= require_tree .
 
 require("src/profile_image_upload");
+import 'hammerjs';
+//=require("src/swipe")
