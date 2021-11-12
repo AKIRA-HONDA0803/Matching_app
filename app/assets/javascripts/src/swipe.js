@@ -39,7 +39,7 @@ if(location.pathname == "/users") {
 
         let moveOutWidth = document.body.clientWidth;
 
-        let keep = Math.abs(event.deltaX) < 200
+        let keep = Math.abs(event.deltaX) < 200;
         event.target.classList.toggle('removed', !keep);
 
         if (keep) {
@@ -83,11 +83,11 @@ if(location.pathname == "/users") {
 
     $('#like').on('click', function() {
       createButtonListener("like");
-    })
+    });
 
     $('#dislike').on('click', function() {
       createButtonListener("dislike");
-    })
+    });
 
   });
 }

@@ -2,6 +2,12 @@
   "name": "techpit-match",
   "private": true,
   "dependencies": {
-    "hammerjs": "^2.0.8"
+    "bootstrap": "^5.1.3",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^4.4.0"
   }
 }
