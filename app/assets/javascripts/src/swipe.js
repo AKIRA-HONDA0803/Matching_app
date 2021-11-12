@@ -1,5 +1,7 @@
+// スワイプページでしか処理を実行しない
 if(location.pathname == "/users") {
   $(function () {
+    // スワイプするユーザーのカード情報を全て取得
     let allCards = document.querySelectorAll('.swipe--card');
     let swipeContainer = document.querySelector('.swipe');
 
@@ -14,6 +16,10 @@ if(location.pathname == "/users") {
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
         card.style.opacity = (10 - index) / 10;
       });
+
+      if (newCards.length == 0) {
+    $(".no-user").addClass("is-active");
+  }
     }
 
     initCards();
@@ -55,5 +61,33 @@ if(location.pathname == "/users") {
       // ==========ここまで追加する==========
 
     });
+    function createButtonListener(reaction) {
+
+      let cards = document.querySelectorAll('.swipe--card:not(.removed)');
+
+  if (!cards.length) return false;
+
+  let moveOutWidth = document.body.clientWidth * 2;
+
+  let card = cards[0];
+  card.classList.add('removed');
+
+  if (reaction == "like") {
+    card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+  } else {
+    card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
+  }
+
+  initCards();
+    }
+
+    $('#like').on('click', function() {
+      createButtonListener("like");
+    })
+
+    $('#dislike').on('click', function() {
+      createButtonListener("dislike");
+    })
+
   });
 }

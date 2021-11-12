@@ -21,4 +21,4 @@
 
 require("src/profile_image_upload");
 import 'hammerjs';
-//=require("src/swipe")
+require("src/swipe");
