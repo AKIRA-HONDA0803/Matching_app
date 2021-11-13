@@ -7,10 +7,8 @@ if(location.pathname == "/users") {
 
     function initCards() {
 
-      // この行を追加する
       let newCards = document.querySelectorAll('.swipe--card:not(.removed)');
 
-      // この行を編集する
       newCards.forEach(function (card, index) {
         card.style.zIndex = allCards.length - index;
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
